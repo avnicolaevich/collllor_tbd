@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $(":checkbox").labelauty();
 
     $("#first").click(function(){
@@ -31,25 +32,6 @@ $(document).ready(function(){
         showDropDown: true,
         placeholder: ' '
     });
-
-    // $('#attributes').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     fullMatch: true,
-    //     placeholder: ''
-    // });
-
-    // $('#category').scombobox({
-    //     filterDelay: 300,
-    //     highlight: true,
-    //     filterIgnoreCase: true,
-    //     fillOnTab: true,
-    //     showDropDown: true,
-    //     placeholder: ' '
-    // });
 
     $('#check').scombobox({
         filterDelay: 300,
@@ -86,7 +68,6 @@ $(document).ready(function(){
         showDropDown: true,
         placeholder: ' '
     });
-
 });
 
 
