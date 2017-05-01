@@ -4,6 +4,7 @@
 @import "vars"
 @import "fontello"
 @import "jquery-labelauty"
+@import "chosen"
 
 *
 	box-sizing: border-box
@@ -177,14 +178,14 @@ a
 	&__heading
 		@include heading
 		padding-bottom: 30px
-	&__select
+	&__content
 		max-width: 466px
 	&__wrapper
 		width: 100%
 		position: relative
 	&__span
 		position: absolute
-		top: 20px
+		top: 24px
 		left: -140px
 		font-size: 1.063em
 		color: $font_color
@@ -274,7 +275,7 @@ a
 		text-align: center
 		padding: 22px 10px
 		position: absolute
-		border: 1px solid rgb(17, 147, 154)
+		border: 2px dashed rgb(17, 147, 154)
 		z-index: 15
 		top: -16px
 		left: 102px
@@ -352,6 +353,7 @@ a
 	display: none
 .verify
 	padding-top: 30px
+	padding-bottom: 400px
 	&__heading
 		@include heading
 		padding-bottom: 20px
@@ -359,6 +361,10 @@ a
 		max-width: 466px
 	&__wrapper
 		width: 100%
+		&-origin
+			width: 50%
+			display: inline-block
+			margin-top: -1px
 	&__percent
 		display: inline-block
 		width: 50.22%
@@ -412,7 +418,7 @@ a
 		text-align: left
 		padding: 22px 14px
 		position: absolute
-		border: 1px solid rgb(17, 147, 154)
+		border: 2px dashed rgb(17, 147, 154)
 		z-index: 15
 		top: -48px
 		left: 101px
@@ -433,15 +439,6 @@ a
 		@include save_link
 		margin-top: 20px
 		margin-bottom: 50px
-.verify__origin > option
-	font-size: 1.063em
-	height: 55px
-	padding: 0 18px
-	border: 1px solid #B1B1B1
-	color: $input_color
-	transition: border-color .25s ease, box-shadow .25s ease
-	&:focus
-		outline: none
 /*End of verify styles*/
 
 
@@ -464,7 +461,7 @@ a
 .scombobox-display
     color: rgba(0, 0, 0, .6)
     width: 100%
-    height: 100%
+    height: 58px
     padding: 18px 18px
     font-size: 1.063em
     border: 1px solid #b1b1b1
@@ -484,12 +481,13 @@ a
     cursor: pointer
 .scombobox-display-div-holder
     padding: 2px
+    margin-left: 5px
 .scombobox-display-div-item
     border: 1px solid #ccc
     margin: 2px
     float: left
-    height: 100%
-    max-width: 150px
+    height: 40%
+    max-width: 200px
     padding: 4px 18px 4px 8px
     position: relative
     vertical-align: middle
@@ -499,18 +497,19 @@ a
     background: #f8f8f8
     display: none
 .scombobox-display-div-item-text
-    max-width: 140px
+    width: 200px
     overflow: hidden
 .scombobox-display-div-item-remove
     position: absolute
-    right: 2px
-    top: 2px
+    right: -1px
+    top: 5px
+    margin-right: 10px
     background: #a0a0a0
     border-radius: 100px
     color: #fff
     cursor: pointer
-    line-height: 90%
-    padding: 1px 3px 0
+    line-height: 87%
+    padding: 1px 3px 2px
 .scombobox-display-div-item-remove:hover
     background: #408cbe
 .scombobox-display-div-item-remove:active
@@ -534,8 +533,8 @@ a
     cursor: pointer
     margin: 0
     padding: 20px
-.scombobox-list p input[type=checkbox]
-    margin-right: 8px;
+.scombobox-list p input[type="checkbox"]
+    margin-right: 18px
     vertical-align: middle
 .scombobox-list p.scombobox-hovered,
 .scombobox-list p:hover
@@ -583,8 +582,12 @@ a
 .scombobox-dropdown-background-invalid
     border-left: 1px solid #ccc
 .scombobox-marker
-    color: #4a4a4a
-.scombobox input[type=checkbox]
+    background: #958FFF
+    color: white
+    border-radius: 2px
+    padding: 0 2px
+    margin: 0 2px
+.scombobox input[type="checkbox"]
     cursor: pointer
 .scombobox-disabled .scombobox-dropdown-arrow,
 .scombobox-disabled .scombobox-dropdown-background

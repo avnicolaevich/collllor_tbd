@@ -75,18 +75,18 @@
 	<div class="capabilities" id="capabilities">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<h2 class="capabilities__heading">2. Capabilities</h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post">
-						<div class="capabilities__select">
+						<div class="capabilities__content">
 							<div class="capabilities__wrapper">
 								<span class="capabilities__span">Attributes</span>
-								<select id="attributes" required/>
-									<option value="attributes" multiple selected="attributes">Attributes</option>
+								<select data-placeholder="Attributes" multiple class="chosen-select">
+									<option label="one"></option>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -94,11 +94,18 @@
 									<option value="5">5</option>
 									<option value="6">6</option>
 									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
 								</select>
 							</div>
 							<div class="capabilities__wrapper  wrap">
 								<span class="capabilities__span">Category</span>
-								<select id="category" required/>
+								<select data-placeholder="Category" multiple class="chosen-select">
 									<optgroup label="Printing">
 										<option value="Booklets">Booklets</option>
 										<option value="Brochures">Brochures</option>
@@ -121,7 +128,7 @@
 	<div class="contact" id="contact">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<h3 class="contact__heading">3. Contact</h3>
 					<p class="contact__subheading">The contact information is not public. Collllor does not share it with your buyers.</p> 
 					<br>
@@ -130,11 +137,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post">
 						<div class="contact__content">
 							<div class="contact__wrapper">
-								<input class="contact__info" type="text"  placeholder="Company Name (DBA)*" name="companyname" require autocomplete="off"/>
+								<input class="contact__info" type="text"  placeholder="Company Name (DBA)*" name="companyname" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
 								<input class="contact__info contact__info-firstname" type="text" placeholder="First Name*" name="firstName" required autocomplete="off"/>
@@ -149,8 +156,8 @@
 								<input class="contact__info contact__info-phone" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<select id="selectState" onchange="document.getElementById('zip').value =value;"/>
-									<option value="State" selected="State">State</option>
+								<select id="selectState">
+									<option value="State" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>
@@ -214,19 +221,19 @@
 								<input class="contact__info contact__info-city" type="text" placeholder="City*" name="city" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-zip" id="zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
+								<input class="contact__info contact__info-zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
 							</div>
 							<div class="contact__wrapper">
 								<input class="contact__info contact__info-service" type="email" placeholder="Customer Service Email" name="email" required/>
 							</div>
-						</div>
-						<div class="contact__help">
-							<i class="icon-help contact__help-icon"></i>
-							<div class="contact__service">
-								<p class="contact__service-text">The customer service email  used for messages from your buyers. (optional)</p>
+							<div class="contact__help">
+								<i class="icon-help contact__help-icon"></i>
+								<div class="contact__service">
+									<p class="contact__service-text">The customer service email  used for messages from your buyers. (optional)</p>
+								</div>
 							</div>
+							<a class="contact__link" id="third" href="#password">save</a>
 						</div>
-						<a class="contact__link" id="third" href="#password">save</a>
 					</form>
 				</div>	
 			</div>
@@ -235,22 +242,22 @@
 	<div class="password" id="password">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<h2 class="password__heading">4. Change Password</h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post">
 						<div class="password__content">
 							<div class="password__wrapper">
-								<input class="password__info" type="text"  placeholder="Old password*" name="oldPassword" require autocomplete="off"/>
+								<input class="password__info" type="text"  placeholder="Old password*" name="oldPassword" required autocomplete="off"/>
 							</div>
 							<div class="password__wrapper">
-								<input class="password__info" type="text"  placeholder="New password*" name="newPassword" require autocomplete="off"/>
+								<input class="password__info" type="text"  placeholder="New password*" name="newPassword" required autocomplete="off"/>
 							</div>
 							<div class="password__wrapper">
-								<input class="password__info" type="text"  placeholder="Repeat new password*" name="repeatNewPassword" require autocomplete="off"/>
+								<input class="password__info" type="text"  placeholder="Repeat new password*" name="repeatNewPassword" required autocomplete="off"/>
 							</div>
 							<a class="password__link" id="fourth" href="#payment">save</a>
 						</div>
@@ -262,7 +269,7 @@
 	<div class="payment" id="payment">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<h2 class="payment__heading">5. Payment</h2>
 					<p class="payment__subheading">Set Up the form of payment. Payment is made once order is shipped. 7% from total transaction will be substracted. (Taxes and Shipping cost are not included)  
 					<br> 
@@ -270,12 +277,12 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post">
 						<div class="payment__content">
 							<div class="payment__wrapper">
-								<select id="check" required/>
-									<option value="chek" selected="Chek">Chek</option>
+								<select id="check">
+									<option value="chek" selected>Chek</option>
 									<option value="Chek1">Chek1</option>
 								</select>
 							</div>
@@ -289,8 +296,8 @@
 								<input class="payment__info payment__info-address" type="email" placeholder="Mailing Address 2*" name="mailing2" required/>
 							</div>
 							<div class="payment__wrapper">
-								<select id="selectStatePayment" onchange="document.getElementById('zipi').value =value;" required/>
-									<option value="State" selected="State">State</option>
+								<select id="selectStatePayment">
+									<option value="State" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>
@@ -354,10 +361,10 @@
 								<input class="payment__info payment__info-city" type="text" placeholder="City*" name="city" required autocomplete="off"/>
 							</div>
 							<div class="payment__wrapper">
-								<input class="payment__info payment__info-zip" id="zipi" type="text" placeholder="Zipcode*" name="zipcode" required/>
+								<input class="payment__info payment__info-zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
 							</div>
+							<a class="payment__link" id="fifth" href="#verify">save</a>
 						</div>
-						<a class="payment__link" id="fifth" href="#verify">save</a>
 					</form>	
 				</div>	
 			</div>
@@ -366,17 +373,17 @@
 	<div class="verify" id="verify">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<h2 class="verify__heading">Verify Tax</h2>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post">
 						<div class="verify__content">
 							<div class="verify__wrapper">
-								<select id="verifyState" required/>
-									<option value="State" selected="State">State</option>
+								<select id="verifyState">
+									<option value="State" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>
@@ -439,21 +446,22 @@
 							<div class="verify__wrapper">
 								<input class="verify__percent" type="text" placeholder="%" name="percent" required autocomplete="off"/>
 							</div>
-							<div class="verify__wrapper">
-								<select class="verify__origin" required/>
-									<option class="verify__option" value="origin" selected="Origin">Origin</option>
-									<option value="Alabama">Alabama</option>
+							<div class="verify__wrapper-origin">
+								<select data-placeholder="Origin" class="chosen-select">
+									<option label="Place"></option>
+									<option value="New York">New York</option>
+									<option value="Los Angeles">Los Angeles</option>
 								</select>
 							</div>
-						</div>
-						<div class="verify__help">
-							<i class="icon-help verify__help-icon"></i>
-							<div class="verify__service">
-								<p class="verify__service-text"><span class="verify__service-span">Origin based states:</span> you are charging the rate for where your business is located. 
-								<br><span class="verify__service-span">Destination-based states:</span> you are charging the rate where the item is being delivered.</p>
+							<div class="verify__help">
+								<i class="icon-help verify__help-icon"></i>
+								<div class="verify__service">
+									<p class="verify__service-text"><span class="verify__service-span">Origin based states:</span> you are charging the rate for where your business is located. 
+									<br><span class="verify__service-span">Destination-based states:</span> you are charging the rate where the item is being delivered.</p>
+								</div>
 							</div>
+							<a class="verify__link" href="javascript:void(0);">save</a>
 						</div>
-						<a class="verify__link" href="javascript:void(0);">save</a>
 					</form>
 				</div>
 			</div>
