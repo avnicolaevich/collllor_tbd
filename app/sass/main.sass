@@ -74,19 +74,28 @@ a
 .m0
 	margin: 0 !important
 
+.hr
+	border-bottom: 1px solid rgb(211, 211, 211)
+
+.wrap
+	margin-top: -1px
+
+.last
+	margin-top: -1px
+	margin-bottom: 100px
+
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
 
+
+
 /*Header styles*/
 .header
-	padding-top: 135px
+	padding-top: 100px
 	&__heading
-		font-family: $helvetica_bold
-		font-size: 2.25em
-		color: $heading_color
-		text-transform: capitalize
+		@include heading 
 		padding-bottom: 30px
 	&__inscription
 		color: rgba(0, 0, 0, .33)
@@ -99,11 +108,489 @@ a
 		padding-bottom: 25px
 	&__photo
 		max-width: 202px
-		height: 214px
-		background-color: $photo_bg
+		height: 170px
+		background-color: $photo_color
 	&__upload
+		display: block
+		font-family: $helvetica_bold
+		text-decoration: none
+		padding: 10px 10px 10px 18px
+		background: $photo_bg
+		color: $white
+		font-size: 1.25em
+		max-width: 202px
+		cursor: pointer
+		text-transform: lowercase
+		transition: .5s ease
+		margin-bottom: 25px
+		&:hover, &:active, &:focus
+			text-decoration: none
+			background: rgb(152, 152, 152)
+			color: #ffffff
+		&-info
+			max-width: 202px
+			color: rgb(134, 137, 135)
+			line-height: 24px
+		&-link
+			@include text_link
+	&__description
+		max-width: 466px
+		background: $white
+		height: auto
+		&-about
+			width: 100%
+		&-area
+			resize: vertical
+			margin: auto
+			font-size: 1.063em
+			display: block
+			width: 100%
+			height: 211px
+			padding: 15px 18px
+			border: 1px solid rgb(190, 189, 189)
+			color: $input_color
+			outline: none
+		&-text
+			text-align: right
+			padding-top: 10px
+			padding-bottom: 25px
+			font-size: 0.938em
+			color: $font_color
+		&-option
+			text-align: left
+			padding-bottom: 20px
+			color: $font_color
+		&-span
+			position: relative
+			top: -24px
+			left: 50px
+			color: $font_color
+		&-link
+			@include save_link
+/*End header styles*/
+
+/*Capabilities styles*/
+#capabilities
+	display: none
+.capabilities
+	padding-top: 30px
+	&__heading
+		@include heading
+		padding-bottom: 30px
+	&__select
+		max-width: 466px
+	&__wrapper
+		width: 100%
+		position: relative
+	&__span
+		position: absolute
+		top: 20px
+		left: -140px
+		font-size: 1.063em
+		color: $font_color
+	&__text
+		padding-top: 30px
+		padding-bottom: 20px
+		color: $font_color
+		&-link
+			@include text_link
+	&__link
+		@include save_link
+/*End of capabilities styles*/
+		
+/*Capabilities styles*/
+#contact
+	display: none
+.contact
+	padding-top: 30px
+	&__heading
+		@include heading
+		padding-bottom: 20px
+	&__subheading
+		max-width: 466px
+		color: $font_color
+		&-mail
+			font-family: $helvetica_bold
+			line-height: 26px
+			color: rgb(132, 127, 127)
+			padding-bottom: 20px
+	&__content
+		max-width: 466px
+	&__wrapper
+		width: 100%
+	&__info
+		@include info
+		&-firstname
+			display: inline-block
+			width: 50%
+			float: left
+			margin-right: -1px
+		&-lastname
+			display: inline-block
+			width: 50.22%
+		&-email
+			border-top: none
+		&-phone
+			margin-bottom: -1px
+		&-city
+			display: inline-block
+			width: 50.22%
+			float: left
+			margin-right: -1px
+		&-zip
+			display: inline-block
+			width: 50%
+		&-service
+			border-top: none
+			margin-bottom: 30px
+	&__link
+		@include save_link
+		margin-bottom: 20px
+		margin-top: -20px
+	&__help
+		position: relative
+		top: -71px
+		left: 485px
+		width: 25px
+		height: 25px
+		background-color: rgb(17, 147, 154)
+		cursor: pointer
+		&-icon
+			color: $white
+			line-height: 25px
+			padding-left: 1px
+			cursor: pointer
+		&:hover .contact__service
+			visibility: visible
+			opacity: 1
+			@include transition
+	&__service
+		visibility: hidden
+		opacity: 0 
+		width: 230px
+		height: 100px
+		background-color: $white
+		color: $font_color
+		text-align: center
+		padding: 22px 10px
+		position: absolute
+		border: 1px solid rgb(17, 147, 154)
+		z-index: 15
+		top: -16px
+		left: 102px
+		margin-left: -60px
+		&::after 
+			content: " "
+			position: absolute
+			bottom: 55%
+			left: 5%
+			margin-left: -42px
+			border-width: 15px
+			border-style: solid
+			border-color: transparent rgb(17, 147, 154) transparent transparent
+			transform: rotateX( 180deg )
+/*End of capabilities styles*/
+
+/*Password styles*/
+#password
+	display: none
+.password
+	padding-top: 30px
+	&__heading
+		@include heading
+		padding-bottom: 40px
+	&__content
+		max-width: 466px
+	&__wrapper
+		width: 100%
+	&__info
+		@include info
+	&__link
+		@include save_link
+		margin-top: 20px
+		margin-bottom: 50px
+/*End of password styles*/
+
+/*Payment styles*/
+#payment
+	display: none
+.payment
+	padding-top: 30px
+	&__heading
+		@include heading
+		padding-bottom: 20px
+	&__subheading
+		max-width: 466px
+		color: $font_color
+		padding-bottom: 35px
+		&-link
+			@include text_link
+	&__content
+		max-width: 466px
+	&__wrapper
+		width: 100%
+	&__info
+		@include info
+		&-address
+			border-bottom: none
+		&-city
+			display: inline-block
+			width: 50.22%
+			float: left
+			margin-right: -1px
+		&-zip
+			display: inline-block
+			width: 50%
+	&__link
+		@include save_link
+		margin-top: 20px
+		margin-bottom: 50px
+/*End of payment styles*/
+
+/*Verify styles*/
+#verify
+	display: none
+.verify
+	padding-top: 30px
+	&__heading
+		@include heading
+		padding-bottom: 20px
+	&__content
+		max-width: 466px
+	&__wrapper
+		width: 100%
+	&__percent
+		display: inline-block
+		width: 50.22%
+		float: left
+		margin-top: -1px
+		margin-right: -1px
+		font-size: 1.063em
+		height: 55px
+		padding: 20px 18px
+		border: 1px solid #B1B1B1
+		color: $input_color
+		transition: border-color .25s ease, box-shadow .25s ease
+		&:focus
+			outline: none	
+	&__origin
+		display: inline-block
+		width: 50%
+		margin-top: -1px
+		font-size: 1.063em
+		height: 55px
+		padding: 0 18px
+		border: 1px solid #B1B1B1
+		color: $input_color
+		transition: border-color .25s ease, box-shadow .25s ease
+		&:focus
+			outline: none
+	&__help
+		position: relative
+		top: -40px
+		left: 485px
+		width: 25px
+		height: 25px
+		background-color: rgb(17, 147, 154)
+		cursor: pointer
+		&-icon
+			color: $white
+			line-height: 25px
+			padding-left: 1px
+			cursor: pointer
+		&:hover .verify__service
+			visibility: visible
+			opacity: 1
+			@include transition
+	&__service
+		visibility: hidden
+		opacity: 0
+		width: 230px
+		height: 170px
+		background-color: $white
+		color: $font_color
+		text-align: left
+		padding: 22px 14px
+		position: absolute
+		border: 1px solid rgb(17, 147, 154)
+		z-index: 15
+		top: -48px
+		left: 101px
+		margin-left: -60px
+		&::after 
+			content: " "
+			position: absolute
+			bottom: 55%
+			left: 5%
+			margin-left: -42px
+			border-width: 15px
+			border-style: solid
+			border-color: transparent rgb(17, 147, 154) transparent transparent
+			transform: rotateX( 180deg )
+		&-span
+			font-family: $helvetica_bold
+	&__link
+		@include save_link
+		margin-top: 20px
+		margin-bottom: 50px
+.verify__origin > option
+	font-size: 1.063em
+	height: 55px
+	padding: 0 18px
+	border: 1px solid #B1B1B1
+	color: $input_color
+	transition: border-color .25s ease, box-shadow .25s ease
+	&:focus
+		outline: none
+/*End of verify styles*/
+
+
+
 		
 
 
 
+
+
+
+
+
+// COMBOBOX STYLES
+.scombobox
+    position: relative
+    font-family: $helvetica_light
+.scombobox select
+    display: none
+.scombobox-display
+    color: rgba(0, 0, 0, .6)
+    width: 100%
+    height: 100%
+    padding: 18px 18px
+    font-size: 1.063em
+    border: 1px solid #b1b1b1
+    box-sizing: border-box
+.scombobox-display:focus
+    border: 1px solid #ff8e40 
+    outline: 0
+.scombobox-display:focus
+    border-bottom: 1px solid #b1b1b1 
+    outline: 0
+.scombobox-display:disabled
+    background: #f0f0f0
+.scombobox-display.scombobox-invalid
+    background: #ffccd4
+.scombobox-display-div
+    border: 1px solid #ccc
+    cursor: pointer
+.scombobox-display-div-holder
+    padding: 2px
+.scombobox-display-div-item
+    border: 1px solid #ccc
+    margin: 2px
+    float: left
+    height: 100%
+    max-width: 150px
+    padding: 4px 18px 4px 8px
+    position: relative
+    vertical-align: middle
+    white-space: nowrap
+    overflow: hidden
+    cursor: default
+    background: #f8f8f8
+    display: none
+.scombobox-display-div-item-text
+    max-width: 140px
+    overflow: hidden
+.scombobox-display-div-item-remove
+    position: absolute
+    right: 2px
+    top: 2px
+    background: #a0a0a0
+    border-radius: 100px
+    color: #fff
+    cursor: pointer
+    line-height: 90%
+    padding: 1px 3px 0
+.scombobox-display-div-item-remove:hover
+    background: #408cbe
+.scombobox-display-div-item-remove:active
+    background: #3075a3
+.scombobox-list
+    color: rgba(0, 0, 0, .6)
+    display: none
+    position: absolute
+    max-height: 200px
+    min-width: 100%
+    max-width: 300%
+    white-space: nowrap
+    box-sizing: border-box
+    overflow-y: auto
+    background: #fff
+    border: none
+    box-shadow: 0 0 3px #ccc
+    z-index: 10
+.scombobox-list p
+    text-align: left
+    cursor: pointer
+    margin: 0
+    padding: 20px
+.scombobox-list p input[type=checkbox]
+    margin-right: 8px;
+    vertical-align: middle
+.scombobox-list p.scombobox-hovered,
+.scombobox-list p:hover
+    background-color: #f2f2f2
+.scombobox-list p.scombobox-separator
+    height: 2px
+    padding: 0
+    cursor: default
+    background: #eee
+.scombobox-list p.scombobox-header
+	cursor: default
+	background: #eee
+	font-size: 1.063em
+	font-family: $helvetica_bold
+	color: $button
+.scombobox-dropdown-arrow
+    position: absolute
+    top: 0
+    right: 0
+    width: 20px
+    height: 100%
+    /* background size: 4 Kb */
+    background: url('../img/down.png') left no-repeat
+    z-index: 1
+    opacity: .85
+    cursor: pointer
+.scombobox-dropdown-arrow:hover
+    opacity: 1
+.scombobox-dropdown-arrow-up
+    background: url('../img/down.png') left no-repeat
+.scombobox-dropdown-background
+    position: absolute
+    top: 1px
+    right: 1px
+    width: 20px
+    height: 56px
+    background: #fff
+    // border: 2px solid #b1b1b1
+    border-left: none
+    box-sizing: border-box
+.scombobox-display:focus .scombobox-dropdown-background:focus
+    outline: 0
+    border: 1px solid #ff8e40
+    border-left: none
+.scombobox-dropdown-background-invalid
+    border-left: 1px solid #ccc
+.scombobox-marker
+    color: #4a4a4a
+.scombobox input[type=checkbox]
+    cursor: pointer
+.scombobox-disabled .scombobox-dropdown-arrow,
+.scombobox-disabled .scombobox-dropdown-background
+    display: none
+.scombobox-disabled .scombobox-display-div
+    background: #f8f8f8
+    cursor: default
+// COMBOBOX STYLES END
 @import "media" // Всегда в конце

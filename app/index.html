@@ -26,7 +26,7 @@
 
 <body>
 	<header class="header">
-		<div class="container">
+		<div class="container hr">
 			<div class="row">
 				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
 					<h1 class="header__heading">1. Business account basics</h1>
@@ -39,17 +39,428 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-xs-12 col-sm-3">
 					<div class="header__photo"></div>
-					<a class="header__upload" href="javascript:void(0);"><i class="icon-up"></i>upload image</a>
+					<a class="header__upload" href="javascript:void(0);"><i class="icon-up header__upload-icon"></i>upload image</a>
+					<p class="header__upload-info">You can also upload grand banner on your profile page.<br><a class="header__upload-link" href="javascript:void(0);">View Profile Page</a></p>
 				</div>
-				<div class="col-lg-6">
-					
+				<div class="col-xs-12 col-sm-6">
+					<form action="#" method="post">
+						<div class="header__description">
+							<div class="header__description-about">
+								<textarea class="header__description-area" name="about" placeholder="About company" required></textarea>
+								<p class="header__description-text">MAX 200 words.</p>
+								<p class="header__description-option">Returns/Refunds/Reprint <a class="header__upload-link" href="javascript:void(0);">Collllor Policy</a></p>
+							</div>
+							<div class="header__description-check">
+								<input class="header__description-input" type="checkbox">
+								<span class="header__description-span">BlindShipping Available</span>
+								<br>
+								<input class="header__description-input" type="checkbox">
+								<span class="header__description-span">PickUp Available</span>
+								<br>
+								<input class="header__description-input" type="checkbox">
+								<span class="header__description-span">BlindWork with Government</span>
+								<br>
+								<input class="header__description-input" type="checkbox">
+								<span class="header__description-span">BlindMailing Services Available</span>
+							</div>
+							<a class="header__description-link" id="first" href="#capabilities">save</a>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</header>
-<script src="js/scripts.min.js"></script>
+	<div class="capabilities" id="capabilities">
+		<div class="container hr">
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<h2 class="capabilities__heading">2. Capabilities</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+					<form action="#" method="post">
+						<div class="capabilities__select">
+							<div class="capabilities__wrapper">
+								<span class="capabilities__span">Attributes</span>
+								<select id="attributes" required/>
+									<option value="attributes" multiple selected="attributes">Attributes</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+								</select>
+							</div>
+							<div class="capabilities__wrapper  wrap">
+								<span class="capabilities__span">Category</span>
+								<select id="category" required/>
+									<optgroup label="Printing">
+										<option value="Booklets">Booklets</option>
+										<option value="Brochures">Brochures</option>
+										<option value="Bussiness Cards">Bussiness Cards</option>
+									</optgroup>
+									<optgroup label="Packaging">
+										<option value="Golf Box Boxes">Golf Box Boxes</option>
+										<option value="Pizza Boxes">Pizza Boxes</option>
+									</optgroup>
+								</select>
+							</div>
+							<p class="capabilities__text">Contact <a class="capabilities__text-link" href="javascript:void(0);">support@collllor.com</a> to add new options</p>
+							<a class="capabilities__link" id="second" href="#contact">save</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact" id="contact">
+		<div class="container hr">
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<h3 class="contact__heading">3. Contact</h3>
+					<p class="contact__subheading">The contact information is not public. Collllor does not share it with your buyers.</p> 
+					<br>
+					<p class="contact__subheading">Email on file</p>
+					<p class="contact__subheading-mail">gannadesign@gmail.com</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<form action="#" method="post">
+						<div class="contact__content">
+							<div class="contact__wrapper">
+								<input class="contact__info" type="text"  placeholder="Company Name (DBA)*" name="companyname" require autocomplete="off"/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-firstname" type="text" placeholder="First Name*" name="firstName" required autocomplete="off"/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-lastname" type="text" placeholder="Last Name*" name="lastname" 		required autocomplete="off"/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-email" type="email" placeholder="Email*" name="email" required/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-phone" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
+							</div>
+							<div class="contact__wrapper">
+								<select id="selectState" onchange="document.getElementById('zip').value =value;"/>
+									<option value="State" selected="State">State</option>
+									<option value="Alabama">Alabama</option>
+									<option value="Alaska">Alaska</option>
+									<option value="Arizona">Arizona</option>
+									<option value="Arkansas">Arkansas</option>
+									<option value="California">California</option>
+									<option value="Colorado">Colorado</option>
+									<option value="Connecticut">Connecticut</option>
+									<option value="Delaware">Delaware</option>
+									<option value="District of Columbia">District of Columbia</option>
+									<option value="Florida">Florida</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Hawaii">Hawaii</option>
+									<option value="Idaho">Idaho</option>
+									<option value="Illinois">Illinois</option>
+									<option value="Indiana">Indiana</option>
+									<option value="Iowa">Iowa</option>
+									<option value="Kansas">Kansas</option>
+									<option value="Kentucky">Kentucky</option>
+									<option value="Louisiana">Louisiana</option>
+									<option value="Maine">Maine</option>
+									<option value="Maryland">Maryland</option>
+									<option value="Massachusetts">Massachusetts</option>
+									<option value="Michigan">Michigan</option>
+									<option value="Minnesota">Minnesota</option>
+									<option value="Mississippi">Mississippi</option>
+									<option value="Missouri">Missouri</option>
+									<option value="Montana">Montana</option>
+									<option value="Nebraska">Nebraska</option>
+									<option value="Nevada">Nevada</option>
+									<option value="New Hampshire">New Hampshire</option>
+									<option value="New Jersey">New Jersey</option>
+									<option value="New Mexico">New Mexico</option>
+									<option value="New York">New York</option>
+									<option value="North Carolina">North Carolina</option>
+									<option value="North Dakota">North Dakota</option>
+									<option value="Ohio">Ohio</option>
+									<option value="Oklahoma">Oklahoma</option>
+									<option value="Oregon">Oregon</option>
+									<option value="Pennsylvania">Pennsylvania</option>
+									<option value="Puerto Rico">Puerto Rico</option>
+									<option value="Rhode Island">Rhode Island</option>
+									<option value="South Carolina">South Carolina</option>
+									<option value="South Dakota">South Dakota</option>
+									<option value="Tennessee">Tennessee</option>
+									<option value="Texas">Texas</option>
+									<option value="Utah">Utah</option>
+									<option value="Vermont">Vermont</option>
+									<option value="Virginia">Virginia</option>
+									<option value="Washington">Washington</option>
+									<option value="West Virginia">West Virginia</option>
+									<option value="Wisconsin">Wisconsin</option>
+									<option value="Wyoming">Wyoming</option>
+									<option value="Armed Forces (the) Americas">Armed Forces (the) Americas</option>
+									<option value="Armed Forces Europe">Armed Forces Europe</option>
+									<option value="Armed Forces Pacific">Armed Forces Pacific</option>
+									<option value="Army Post Office (U.S. Army and U.S. Air Force)">Army Post Office (U.S. Army and U.S. Air Force)</option>
+									<option value="Fleet Post Office (U.S. Navy and U.S. Marine Corps)">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+								</select>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-city" type="text" placeholder="City*" name="city" required autocomplete="off"/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-zip" id="zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
+							</div>
+							<div class="contact__wrapper">
+								<input class="contact__info contact__info-service" type="email" placeholder="Customer Service Email" name="email" required/>
+							</div>
+						</div>
+						<div class="contact__help">
+							<i class="icon-help contact__help-icon"></i>
+							<div class="contact__service">
+								<p class="contact__service-text">The customer service email  used for messages from your buyers. (optional)</p>
+							</div>
+						</div>
+						<a class="contact__link" id="third" href="#password">save</a>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="password" id="password">
+		<div class="container hr">
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<h2 class="password__heading">4. Change Password</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<form action="#" method="post">
+						<div class="password__content">
+							<div class="password__wrapper">
+								<input class="password__info" type="text"  placeholder="Old password*" name="oldPassword" require autocomplete="off"/>
+							</div>
+							<div class="password__wrapper">
+								<input class="password__info" type="text"  placeholder="New password*" name="newPassword" require autocomplete="off"/>
+							</div>
+							<div class="password__wrapper">
+								<input class="password__info" type="text"  placeholder="Repeat new password*" name="repeatNewPassword" require autocomplete="off"/>
+							</div>
+							<a class="password__link" id="fourth" href="#payment">save</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="payment" id="payment">
+		<div class="container hr">
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<h2 class="payment__heading">5. Payment</h2>
+					<p class="payment__subheading">Set Up the form of payment. Payment is made once order is shipped. 7% from total transaction will be substracted. (Taxes and Shipping cost are not included)  
+					<br> 
+					Read <a class="payment__subheading-link" href="javascript:void(0);">Sellers Terms and conditions</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<form action="#" method="post">
+						<div class="payment__content">
+							<div class="payment__wrapper">
+								<select id="check" required/>
+									<option value="chek" selected="Chek">Chek</option>
+									<option value="Chek1">Chek1</option>
+								</select>
+							</div>
+							<div class="payment__wrapper">
+								<input class="payment__info" type="text" placeholder="Check payable to*" name="payable" required autocomplete="off"/>
+							</div>
+							<div class="payment__wrapper">
+								<input class="payment__info" type="text" placeholder="Mailing Address 1*" name="mailing1" required autocomplete="off"/>
+							</div>
+							<div class="payment__wrapper">
+								<input class="payment__info payment__info-address" type="email" placeholder="Mailing Address 2*" name="mailing2" required/>
+							</div>
+							<div class="payment__wrapper">
+								<select id="selectStatePayment" onchange="document.getElementById('zipi').value =value;" required/>
+									<option value="State" selected="State">State</option>
+									<option value="Alabama">Alabama</option>
+									<option value="Alaska">Alaska</option>
+									<option value="Arizona">Arizona</option>
+									<option value="Arkansas">Arkansas</option>
+									<option value="California">California</option>
+									<option value="Colorado">Colorado</option>
+									<option value="Connecticut">Connecticut</option>
+									<option value="Delaware">Delaware</option>
+									<option value="District of Columbia">District of Columbia</option>
+									<option value="Florida">Florida</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Hawaii">Hawaii</option>
+									<option value="Idaho">Idaho</option>
+									<option value="Illinois">Illinois</option>
+									<option value="Indiana">Indiana</option>
+									<option value="Iowa">Iowa</option>
+									<option value="Kansas">Kansas</option>
+									<option value="Kentucky">Kentucky</option>
+									<option value="Louisiana">Louisiana</option>
+									<option value="Maine">Maine</option>
+									<option value="Maryland">Maryland</option>
+									<option value="Massachusetts">Massachusetts</option>
+									<option value="Michigan">Michigan</option>
+									<option value="Minnesota">Minnesota</option>
+									<option value="Mississippi">Mississippi</option>
+									<option value="Missouri">Missouri</option>
+									<option value="Montana">Montana</option>
+									<option value="Nebraska">Nebraska</option>
+									<option value="Nevada">Nevada</option>
+									<option value="New Hampshire">New Hampshire</option>
+									<option value="New Jersey">New Jersey</option>
+									<option value="New Mexico">New Mexico</option>
+									<option value="New York">New York</option>
+									<option value="North Carolina">North Carolina</option>
+									<option value="North Dakota">North Dakota</option>
+									<option value="Ohio">Ohio</option>
+									<option value="Oklahoma">Oklahoma</option>
+									<option value="Oregon">Oregon</option>
+									<option value="Pennsylvania">Pennsylvania</option>
+									<option value="Puerto Rico">Puerto Rico</option>
+									<option value="Rhode Island">Rhode Island</option>
+									<option value="South Carolina">South Carolina</option>
+									<option value="South Dakota">South Dakota</option>
+									<option value="Tennessee">Tennessee</option>
+									<option value="Texas">Texas</option>
+									<option value="Utah">Utah</option>
+									<option value="Vermont">Vermont</option>
+									<option value="Virginia">Virginia</option>
+									<option value="Washington">Washington</option>
+									<option value="West Virginia">West Virginia</option>
+									<option value="Wisconsin">Wisconsin</option>
+									<option value="Wyoming">Wyoming</option>
+									<option value="Armed Forces (the) Americas">Armed Forces (the) Americas</option>
+									<option value="Armed Forces Europe">Armed Forces Europe</option>
+									<option value="Armed Forces Pacific">Armed Forces Pacific</option>
+									<option value="Army Post Office (U.S. Army and U.S. Air Force)">Army Post Office (U.S. Army and U.S. Air Force)</option>
+									<option value="Fleet Post Office (U.S. Navy and U.S. Marine Corps)">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+								</select>
+							</div>
+							<div class="payment__wrapper">
+								<input class="payment__info payment__info-city" type="text" placeholder="City*" name="city" required autocomplete="off"/>
+							</div>
+							<div class="payment__wrapper">
+								<input class="payment__info payment__info-zip" id="zipi" type="text" placeholder="Zipcode*" name="zipcode" required/>
+							</div>
+						</div>
+						<a class="payment__link" id="fifth" href="#verify">save</a>
+					</form>	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="verify" id="verify">
+		<div class="container hr">
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<h2 class="verify__heading">Verify Tax</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+					<form action="#" method="post">
+						<div class="verify__content">
+							<div class="verify__wrapper">
+								<select id="verifyState" required/>
+									<option value="State" selected="State">State</option>
+									<option value="Alabama">Alabama</option>
+									<option value="Alaska">Alaska</option>
+									<option value="Arizona">Arizona</option>
+									<option value="Arkansas">Arkansas</option>
+									<option value="California">California</option>
+									<option value="Colorado">Colorado</option>
+									<option value="Connecticut">Connecticut</option>
+									<option value="Delaware">Delaware</option>
+									<option value="District of Columbia">District of Columbia</option>
+									<option value="Florida">Florida</option>
+									<option value="Georgia">Georgia</option>
+									<option value="Hawaii">Hawaii</option>
+									<option value="Idaho">Idaho</option>
+									<option value="Illinois">Illinois</option>
+									<option value="Indiana">Indiana</option>
+									<option value="Iowa">Iowa</option>
+									<option value="Kansas">Kansas</option>
+									<option value="Kentucky">Kentucky</option>
+									<option value="Louisiana">Louisiana</option>
+									<option value="Maine">Maine</option>
+									<option value="Maryland">Maryland</option>
+									<option value="Massachusetts">Massachusetts</option>
+									<option value="Michigan">Michigan</option>
+									<option value="Minnesota">Minnesota</option>
+									<option value="Mississippi">Mississippi</option>
+									<option value="Missouri">Missouri</option>
+									<option value="Montana">Montana</option>
+									<option value="Nebraska">Nebraska</option>
+									<option value="Nevada">Nevada</option>
+									<option value="New Hampshire">New Hampshire</option>
+									<option value="New Jersey">New Jersey</option>
+									<option value="New Mexico">New Mexico</option>
+									<option value="New York">New York</option>
+									<option value="North Carolina">North Carolina</option>
+									<option value="North Dakota">North Dakota</option>
+									<option value="Ohio">Ohio</option>
+									<option value="Oklahoma">Oklahoma</option>
+									<option value="Oregon">Oregon</option>
+									<option value="Pennsylvania">Pennsylvania</option>
+									<option value="Puerto Rico">Puerto Rico</option>
+									<option value="Rhode Island">Rhode Island</option>
+									<option value="South Carolina">South Carolina</option>
+									<option value="South Dakota">South Dakota</option>
+									<option value="Tennessee">Tennessee</option>
+									<option value="Texas">Texas</option>
+									<option value="Utah">Utah</option>
+									<option value="Vermont">Vermont</option>
+									<option value="Virginia">Virginia</option>
+									<option value="Washington">Washington</option>
+									<option value="West Virginia">West Virginia</option>
+									<option value="Wisconsin">Wisconsin</option>
+									<option value="Wyoming">Wyoming</option>
+									<option value="Armed Forces (the) Americas">Armed Forces (the) Americas</option>
+									<option value="Armed Forces Europe">Armed Forces Europe</option>
+									<option value="Armed Forces Pacific">Armed 	Forces Pacific</option>
+									<option value="Army Post Office (U.S. Army and 	U.S. Air Force)">Army Post Office (U.S. Army and U.S. Air Force)</option>
+									<option value="Fleet Post Office (U.S. Navy and U.S. Marine Corps)">Fleet Post Office (U.S. Navy and U.S. Marine Corps)</option>
+								</select>
+							</div>
+							<div class="verify__wrapper">
+								<input class="verify__percent" type="text" placeholder="%" name="percent" required autocomplete="off"/>
+							</div>
+							<div class="verify__wrapper">
+								<select class="verify__origin" required/>
+									<option class="verify__option" value="origin" selected="Origin">Origin</option>
+									<option value="Alabama">Alabama</option>
+								</select>
+							</div>
+						</div>
+						<div class="verify__help">
+							<i class="icon-help verify__help-icon"></i>
+							<div class="verify__service">
+								<p class="verify__service-text"><span class="verify__service-span">Origin based states:</span> you are charging the rate for where your business is located. 
+								<br><span class="verify__service-span">Destination-based states:</span> you are charging the rate where the item is being delivered.</p>
+							</div>
+						</div>
+						<a class="verify__link" href="javascript:void(0);">save</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
 
 </body>
 </html>
