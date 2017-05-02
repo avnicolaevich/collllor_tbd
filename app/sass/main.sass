@@ -5,6 +5,9 @@
 @import "fontello"
 @import "jquery-labelauty"
 @import "chosen"
+@import "jquery-multiselect"
+@import "jquery-ui"
+@import "jquery-ui-theme"
 
 *
 	box-sizing: border-box
@@ -96,8 +99,8 @@ a
 .header
 	padding-top: 100px
 	&__heading
-		@include heading 
-		padding-bottom: 30px
+		@include heading
+		margin-bottom: 30px 
 	&__inscription
 		color: rgba(0, 0, 0, .33)
 		text-transform: capitalize
@@ -171,13 +174,13 @@ a
 /*End header styles*/
 
 /*Capabilities styles*/
-#capabilities
-	display: none
 .capabilities
 	padding-top: 30px
 	&__heading
 		@include heading
-		padding-bottom: 30px
+		margin-bottom: 30px 
+	&__form
+		display: block
 	&__content
 		max-width: 466px
 	&__wrapper
@@ -200,21 +203,22 @@ a
 /*End of capabilities styles*/
 		
 /*Capabilities styles*/
-#contact
-	display: none
 .contact
 	padding-top: 30px
 	&__heading
 		@include heading
-		padding-bottom: 20px
+		margin-bottom: 20px 
 	&__subheading
 		max-width: 466px
 		color: $font_color
+		line-height: 20px
 		&-mail
 			font-family: $helvetica_bold
 			line-height: 26px
 			color: rgb(132, 127, 127)
 			padding-bottom: 20px
+	&__form
+		display: none
 	&__content
 		max-width: 466px
 	&__wrapper
@@ -293,13 +297,13 @@ a
 /*End of capabilities styles*/
 
 /*Password styles*/
-#password
-	display: none
 .password
 	padding-top: 30px
 	&__heading
 		@include heading
-		padding-bottom: 40px
+		margin-bottom: 40px 
+	&__form
+		display: none
 	&__content
 		max-width: 466px
 	&__wrapper
@@ -313,19 +317,20 @@ a
 /*End of password styles*/
 
 /*Payment styles*/
-#payment
-	display: none
 .payment
 	padding-top: 30px
 	&__heading
 		@include heading
-		padding-bottom: 20px
+		margin-bottom: 20px 
 	&__subheading
 		max-width: 466px
 		color: $font_color
 		padding-bottom: 35px
+		line-height: 20px
 		&-link
 			@include text_link
+	&__form
+		display: none
 	&__content
 		max-width: 466px
 	&__wrapper
@@ -349,14 +354,14 @@ a
 /*End of payment styles*/
 
 /*Verify styles*/
-#verify
-	display: none
 .verify
 	padding-top: 30px
 	padding-bottom: 400px
 	&__heading
 		@include heading
-		padding-bottom: 20px
+		margin-bottom: 20px 
+	&__form
+		display: none
 	&__content
 		max-width: 466px
 	&__wrapper

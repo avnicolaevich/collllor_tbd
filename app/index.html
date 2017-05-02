@@ -29,7 +29,7 @@
 		<div class="container hr">
 			<div class="row">
 				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
-					<h1 class="header__heading">1. Business account basics</h1>
+					<a class="header__heading" href="javascript:void(0);">1. Business account basics</a>
 				</div>
 			</div>
 			<div class="row">
@@ -65,23 +65,23 @@
 								<input class="header__description-input" type="checkbox">
 								<span class="header__description-span">BlindMailing Services Available</span>
 							</div>
-							<a class="header__description-link" id="first" href="#capabilities">save</a>
+							<a class="header__description-link" href="javascript:void(0);">save</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="capabilities" id="capabilities">
+	<div class="capabilities">
 		<div class="container hr">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<h2 class="capabilities__heading">2. Capabilities</h2>
+					<a class="capabilities__heading" href="javascript:void(0);">2. Capabilities</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post">
+					<form action="#" method="post" class="capabilities__form">
 						<div class="capabilities__content">
 							<div class="capabilities__wrapper">
 								<span class="capabilities__span">Attributes</span>
@@ -105,7 +105,7 @@
 							</div>
 							<div class="capabilities__wrapper  wrap">
 								<span class="capabilities__span">Category</span>
-								<select data-placeholder="Category" multiple class="chosen-select">
+								<select id="category" name="category" multiple="multiple">
 									<optgroup label="Printing">
 										<option value="Booklets">Booklets</option>
 										<option value="Brochures">Brochures</option>
@@ -118,18 +118,18 @@
 								</select>
 							</div>
 							<p class="capabilities__text">Contact <a class="capabilities__text-link" href="javascript:void(0);">support@collllor.com</a> to add new options</p>
-							<a class="capabilities__link" id="second" href="#contact">save</a>
+							<a class="capabilities__link" href="javascript:void(0);">save</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="contact" id="contact">
+	<div class="contact">
 		<div class="container hr">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<h3 class="contact__heading">3. Contact</h3>
+					<a class="contact__heading" href="javascript:void(0);">3. Contact</a>
 					<p class="contact__subheading">The contact information is not public. Collllor does not share it with your buyers.</p> 
 					<br>
 					<p class="contact__subheading">Email on file</p>
@@ -138,7 +138,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post">
+					<form action="#" method="post" class="contact__form">
 						<div class="contact__content">
 							<div class="contact__wrapper">
 								<input class="contact__info" type="text"  placeholder="Company Name (DBA)*" name="companyname" required autocomplete="off"/>
@@ -232,23 +232,23 @@
 									<p class="contact__service-text">The customer service email  used for messages from your buyers. (optional)</p>
 								</div>
 							</div>
-							<a class="contact__link" id="third" href="#password">save</a>
+							<a class="contact__link" href="javascript:void(0);">save</a>
 						</div>
 					</form>
 				</div>	
 			</div>
 		</div>
 	</div>
-	<div class="password" id="password">
+	<div class="password">
 		<div class="container hr">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<h2 class="password__heading">4. Change Password</h2>
+					<a class="password__heading" href="javascript:void(0);">4. Change Password</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post">
+					<form action="#" method="post" class="password__form">
 						<div class="password__content">
 							<div class="password__wrapper">
 								<input class="password__info" type="text"  placeholder="Old password*" name="oldPassword" required autocomplete="off"/>
@@ -259,18 +259,18 @@
 							<div class="password__wrapper">
 								<input class="password__info" type="text"  placeholder="Repeat new password*" name="repeatNewPassword" required autocomplete="off"/>
 							</div>
-							<a class="password__link" id="fourth" href="#payment">save</a>
+							<a class="password__link" href="javascript:void(0);">save</a>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="payment" id="payment">
+	<div class="payment">
 		<div class="container hr">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<h2 class="payment__heading">5. Payment</h2>
+					<a class="payment__heading" href="javascript:void(0);">5. Payment</a>
 					<p class="payment__subheading">Set Up the form of payment. Payment is made once order is shipped. 7% from total transaction will be substracted. (Taxes and Shipping cost are not included)  
 					<br> 
 					Read <a class="payment__subheading-link" href="javascript:void(0);">Sellers Terms and conditions</a></p>
@@ -278,7 +278,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post">
+					<form action="#" method="post" class="payment__form">
 						<div class="payment__content">
 							<div class="payment__wrapper">
 								<select id="check">
@@ -363,23 +363,23 @@
 							<div class="payment__wrapper">
 								<input class="payment__info payment__info-zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
 							</div>
-							<a class="payment__link" id="fifth" href="#verify">save</a>
+							<a class="payment__link" href="javascript:void(0);">save</a>
 						</div>
 					</form>	
 				</div>	
 			</div>
 		</div>
 	</div>
-	<div class="verify" id="verify">
+	<div class="verify">
 		<div class="container hr">
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<h2 class="verify__heading">Verify Tax</h2>
+					<a class="verify__heading" href="javascript:void(0);">Verify Tax</a>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post">
+					<form action="#" method="post" class="verify__form">
 						<div class="verify__content">
 							<div class="verify__wrapper">
 								<select id="verifyState">

@@ -21,6 +21,8 @@ gulp.task('scripts', function() {
 		'app/libs/jquery-labelauty/jquery-labelauty.js',
 		'app/libs/scombobox/jquery.scombobox.min.js',
 		'app/libs/chosen/chosen.jquery.js',
+		'app/libs/jquery-ui/jquery-ui.js',
+		'app/libs/multiselect/jquery-multiselect.js',
 		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
