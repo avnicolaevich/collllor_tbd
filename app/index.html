@@ -85,8 +85,7 @@
 						<div class="capabilities__content">
 							<div class="capabilities__wrapper">
 								<span class="capabilities__span">Attributes</span>
-								<select data-placeholder="Attributes" multiple class="chosen-select">
-									<option label="one"></option>
+								<select id="attributes" name="attributes" multiple="multiple" required>
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
@@ -105,7 +104,12 @@
 							</div>
 							<div class="capabilities__wrapper  wrap">
 								<span class="capabilities__span">Category</span>
-								<select id="category" name="category" multiple="multiple">
+								<select id="category" name="category" multiple="multiple" required>
+									<optgroup label="Commercial Printing">
+										<option value="Booklets/Catalogs">Booklets/Catalogs</option>
+										<option value="Bookmarks">Bookmarks</option>
+										<option value="Brochures">Brochures</option>
+									</optgroup>
 									<optgroup label="Printing">
 										<option value="Booklets">Booklets</option>
 										<option value="Brochures">Brochures</option>
@@ -156,8 +160,8 @@
 								<input class="contact__info contact__info-phone" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<select id="selectState">
-									<option label="state" selected>State</option>
+								<select id="selectState" required>
+									<option disabled selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>
@@ -281,9 +285,10 @@
 					<form action="#" method="post" class="payment__form">
 						<div class="payment__content">
 							<div class="payment__wrapper">
-								<select id="check">
-									<option value="chek" selected>Chek</option>
-									<option value="Chek1">Chek1</option>
+								<select id="check" required>
+									<option value="Chek" selected>Chek</option>
+									<option value="PayPal">PayPal</option>
+									<option value="Bank Account (USA, CANADA only)">Bank Account (USA, CANADA only)</option>
 								</select>
 							</div>
 							<div class="payment__wrapper">
@@ -296,8 +301,8 @@
 								<input class="payment__info payment__info-address" type="email" placeholder="Mailing Address 2*" name="mailing2" required/>
 							</div>
 							<div class="payment__wrapper">
-								<select id="selectStatePayment">
-									<option label="state" selected>State</option>
+								<select id="selectStatePayment" required>
+									<option disabled selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>

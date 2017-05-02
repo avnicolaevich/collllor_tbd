@@ -72,6 +72,10 @@ a
 	text-decoration: none
 	color: $link
 
+ul, li
+	padding: 0
+	margin: 0
+
 .p0
 	padding: 0 !important
 
@@ -180,7 +184,7 @@ a
 		@include heading
 		margin-bottom: 30px 
 	&__form
-		display: block
+		display: none
 	&__content
 		max-width: 466px
 	&__wrapper
@@ -279,7 +283,7 @@ a
 		text-align: center
 		padding: 22px 10px
 		position: absolute
-		border: 2px dashed rgb(17, 147, 154)
+		border: 1px solid #B1B1B1
 		z-index: 15
 		top: -16px
 		left: 102px
@@ -292,7 +296,7 @@ a
 			margin-left: -42px
 			border-width: 15px
 			border-style: solid
-			border-color: transparent rgb(17, 147, 154) transparent transparent
+			border-color: transparent #B1B1B1 transparent transparent
 			transform: rotateX( 180deg )
 /*End of capabilities styles*/
 
@@ -423,7 +427,7 @@ a
 		text-align: left
 		padding: 22px 14px
 		position: absolute
-		border: 2px dashed rgb(17, 147, 154)
+		border: 1px solid #B1B1B1
 		z-index: 15
 		top: -48px
 		left: 101px
@@ -436,7 +440,7 @@ a
 			margin-left: -42px
 			border-width: 15px
 			border-style: solid
-			border-color: transparent rgb(17, 147, 154) transparent transparent
+			border-color: transparent #B1B1B1 transparent transparent
 			transform: rotateX( 180deg )
 		&-span
 			font-family: $helvetica_bold
@@ -480,7 +484,8 @@ a
 .scombobox-display:disabled
     background: #f0f0f0
 .scombobox-display.scombobox-invalid
-    background: #ffccd4
+	background: #ededed
+	color: #2b2b2b
 .scombobox-display-div
     border: 1px solid #ccc
     cursor: pointer
@@ -516,9 +521,9 @@ a
     line-height: 87%
     padding: 1px 3px 2px
 .scombobox-display-div-item-remove:hover
-    background: #408cbe
+    background: $button
 .scombobox-display-div-item-remove:active
-    background: #3075a3
+    background: $button
 .scombobox-list
     color: rgba(0, 0, 0, .6)
     display: none
@@ -562,14 +567,15 @@ a
     width: 20px
     height: 100%
     /* background size: 4 Kb */
-    background: url('../img/down.png') left no-repeat
+    background: url('../img/down.png') no-repeat
+    background-position: 50% 50%
     z-index: 1
-    opacity: .85
     cursor: pointer
 .scombobox-dropdown-arrow:hover
     opacity: 1
 .scombobox-dropdown-arrow-up
     background: url('../img/down.png') left no-repeat
+    background-position: 50% 50%
 .scombobox-dropdown-background
     position: absolute
     top: 1px
@@ -587,7 +593,7 @@ a
 .scombobox-dropdown-background-invalid
     border-left: 1px solid #ccc
 .scombobox-marker
-    background: #958FFF
+    background: rgb(17, 147, 154)
     color: white
     border-radius: 2px
     padding: 0 2px

@@ -3,7 +3,7 @@ $(document).ready(function(){
     $(":checkbox").labelauty();
 
     $(".capabilities__heading").click(function(){
-        // $(".capabilities__form").css("display", "block");
+        $(".capabilities__form").css("display", "block");
     });
 
     $(".contact__heading").click(function(){
@@ -24,10 +24,20 @@ $(document).ready(function(){
 
     $("#category").multiselect({
         header: true,
-        height: 200,
+        width: 466,
+        maxWidth: 466,
+        noneSelectedText: "Category"
+    });
+
+    $("#attributes").multiselect({
+        header: true,
+        width: 466,
+        maxWidth: 466,
+        noneSelectedText: "Attributes"
     });
 
     $(".chosen-select").chosen({width: "100%"});
+
 
     $('#selectState').scombobox({
         filterDelay: 300,
