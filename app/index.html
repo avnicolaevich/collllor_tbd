@@ -28,12 +28,12 @@
 	<header class="header">
 		<div class="container hr">
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<a class="header__heading" href="javascript:void(0);">1. Business account basics</a>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12 col-lg-offset-3 col-lg-9">
+				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<p class="header__inscription">Company name</p>
 					<h2 class="header__subheading">Printing 123</h2>
 				</div>
@@ -160,8 +160,8 @@
 								<input class="contact__info contact__info-phone" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<select id="selectState" required>
-									<option disabled selected>State</option>
+								<select id="selectState">
+									<option label="State" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
 									<option value="Arizona">Arizona</option>
@@ -286,7 +286,7 @@
 						<div class="payment__content">
 							<div class="payment__paychek" id="paymentpaychek">
 								<div class="payment__wrapper">
-									<select id="check" name="payment" required>
+									<select id="check" name="payment">
 										<option value="Chek" selected>Chek</option>
 										<option value="PayPal">PayPal</option>
 										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
@@ -302,8 +302,8 @@
 									<input class="payment__info payment__info-address" type="email" placeholder="Mailing Address 2*" name="mailing2" required/>
 								</div>
 								<div class="payment__wrapper">
-									<select id="selectStatePayment" required>
-										<option disabled selected>State</option>
+									<select id="selectStatePayment">
+										<option label="State">State</option>
 										<option value="Alabama">Alabama</option>
 										<option value="Alaska">Alaska</option>
 										<option value="Arizona">Arizona</option>
@@ -373,7 +373,7 @@
 							</div>
 							<div class="payment__paypal" id="paymentpaypal">
 								<div class="payment__wrapper">
-									<select id="Pal" name="payment" required>
+									<select id="Pal" name="payment">
 										<option value="Chek">Chek</option>
 										<option value="PayPal" selected>PayPal</option>
 										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
@@ -386,14 +386,14 @@
 							</div>
 							<div class="payment__bank" id="paymentbank">
 								<div class="payment__wrapper">
-									<select id="Bank" name="payment" required>
+									<select id="Bank" name="payment">
 										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
 										<option value="BankAccount" selected>Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
 								<div class="payment__wrapper wrap">
-									<select id="company" name="company" required>
+									<select id="company" name="company">
 										<option value="Company" selected>Company</option>
 										<option value="Individual">Individual</option>
 									</select>
@@ -421,14 +421,14 @@
 							</div>
 							<div class="payment__individual" id="paymentindividual">
 								<div class="payment__wrapper">
-									<select id="individual" name="payment" required>
+									<select id="individual" name="payment">
 										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
 										<option value="BankAccount" selected>Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
 								<div class="payment__wrapper wrap">
-									<select id="self" name="company" required>
+									<select id="self" name="company">
 										<option value="Company">Company</option>
 										<option value="Individual" selected>Individual</option>
 									</select>

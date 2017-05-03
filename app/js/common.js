@@ -2,24 +2,24 @@ $(document).ready(function(){
     
     $(":checkbox").labelauty();
 
-    $(".capabilities__heading").click(function(){
-        $(".capabilities__form").css("display", "block");
+    $( ".capabilities__heading" ).click(function() {
+        $( ".capabilities__form" ).toggle('slow');
     });
 
     $(".contact__heading").click(function(){
-        $(".contact__form").css("display", "block");
+        $(".contact__form").toggle('slow');
     });
 
     $(".password__heading").click(function(){
-        $(".password__form").css("display", "block");
+        $(".password__form").toggle('slow');
     });
 
     $(".payment__heading").click(function(){
-        $(".payment__form").css("display", "block");
+        $(".payment__form").toggle('slow');
     });
 
     $(".verify__heading").click(function(){
-        $(".verify__form").css("display", "block");
+        $(".verify__form").toggle('slow');
     });
 
     $("#category").multiselect({
@@ -31,8 +31,6 @@ $(document).ready(function(){
 
     $("#attributes").multiselect({
         header: true,
-        width: 466,
-        maxWidth: 466,
         noneSelectedText: "Attributes"
     });
 
@@ -131,15 +129,6 @@ $(document).ready(function(){
         placeholder: ' '
     });
 
-    // $('.capabilities__heading').click(function() {
-    //     var checkElement = $(this).next();
-    //     checkElement.stop().animate({'height':'toggle'}, 0.1, 'linear');
-    //     if((checkElement.is('#capabilities')) && (checkElement.is(':visible'))) {
-    //         return false;
-    //     } else if ((checkElement.is('#capabilities')) && (checkElement.is(':hidden'))) {
-    //         return true;
-    //     }
-    // });
     $('select[name="payment"]').change(function(){
     
     	var el = $(this).val();

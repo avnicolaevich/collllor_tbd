@@ -314,7 +314,7 @@ button.ui-button::-moz-focus-inner {
 	pointer-events: none;
 }
 .ui-datepicker {
-	width: 17em;
+	width: 25em;
 	padding: .2em .2em 0;
 	display: none;
 }
@@ -935,7 +935,7 @@ html .ui-button.ui-state-disabled:active {
 	font-weight: normal;
 	color: rgba(0, 0, 0, 0.6);
     height: 58px;
-    padding: 18px 18px;
+    padding: 18px 3px 18px 18px;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -1071,6 +1071,9 @@ a.ui-button:active,
 .ui-icon {
 	width: 16px;
 	height: 16px;
+}
+.ui-icon:hover {
+	opacity: 1;
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
