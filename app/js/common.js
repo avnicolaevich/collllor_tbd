@@ -36,8 +36,10 @@ $(document).ready(function(){
         noneSelectedText: "Attributes"
     });
 
-    $(".chosen-select").chosen({width: "100%"});
-
+    $(".chosen-select").chosen({
+    	width: "100%",
+    	disable_search_threshold: 10
+    });
 
     $('#selectState').scombobox({
         filterDelay: 300,
@@ -48,7 +50,52 @@ $(document).ready(function(){
         placeholder: ' '
     });
 
+    $('#company').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
+
+    $('#individual').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
+
+    $('#self').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
+
     $('#check').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
+
+    $('#Pal').scombobox({
+        filterDelay: 300,
+        highlight: true,
+        filterIgnoreCase: true,
+        fillOnTab: true,
+        showDropDown: true,
+        placeholder: ' '
+    });
+
+    $('#Bank').scombobox({
         filterDelay: 300,
         highlight: true,
         filterIgnoreCase: true,
@@ -93,8 +140,55 @@ $(document).ready(function(){
     //         return true;
     //     }
     // });
+    $('select[name="payment"]').change(function(){
+    
+    	var el = $(this).val();
+   		if (el=='Chek') { 
+          $('#paymentpaychek').css('display','block');
+          $('#paymentpaypal').css('display','none');
+          $('#paymentbank').css('display','none');
+          $('#paymentindividual').css('display','none')
+        }
+    	else if (el=='PayPal') {
+          $('#paymentpaychek').css('display','none');
+          $('#paymentpaypal').css('display','block');
+          $('#paymentbank').css('display','none');
+          $('#paymentindividual').css('display','none')
+        }
+        else { 
+          $('#paymentpaychek').css('display','none');
+          $('#paymentpaypal').css('display','none');
+          $('#paymentbank').css('display','block');
+          $('#paymentindividual').css('display','none')
+        }
+	});
 
+	$('select[name="company"]').change(function(){
+    
+    	var el = $(this).val();
+   		if (el=='Company') { 
+          $('#paymentpaychek').css('display','none');
+          $('#paymentpaypal').css('display','none');
+          $('#paymentbank').css('display','block');
+          $('#paymentindividual').css('display','none')
+        }
+    	else {
+          $('#paymentpaychek').css('display','none');
+          $('#paymentpaypal').css('display','none');
+          $('#paymentbank').css('display','none');
+          $('#paymentindividual').css('display','block')
+        }
+	});
 
+	$(function() {
+    	$("#datepicker").datepicker();
+ 	});
+ 	$(function() {
+    	$("#monthpicker").datepicker();
+ 	});
+ 	$(function() {
+    	$("#yearpicker").datepicker();
+ 	});
 
 });
 
