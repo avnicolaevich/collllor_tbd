@@ -45,7 +45,7 @@
 					<p class="header__upload-info">You can also upload grand banner on your profile page.<br><a class="header__upload-link" href="javascript:void(0);">View Profile Page</a></p>
 				</div>
 				<div class="col-xs-12 col-sm-6">
-					<form action="#" method="post">
+					<form action="" method="post">
 						<div class="header__description">
 							<div class="header__description-about">
 								<textarea class="header__description-area" name="about" placeholder="About company" required></textarea>
@@ -65,7 +65,7 @@
 								<input class="header__description-input" type="checkbox">
 								<span class="header__description-span">BlindMailing Services Available</span>
 							</div>
-							<a class="header__description-link" href="javascript:void(0);">save</a>
+							<button class="header__description-link" href="javascript:void(0);">save</button>
 						</div>
 					</form>
 				</div>
@@ -81,7 +81,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post" class="capabilities__form">
+					<form action="" method="post" class="capabilities__form">
 						<div class="capabilities__content">
 							<div class="capabilities__wrapper">
 								<span class="capabilities__span">Attributes</span>
@@ -122,7 +122,7 @@
 								</select>
 							</div>
 							<p class="capabilities__text">Contact <a class="capabilities__text-link" href="javascript:void(0);">support@collllor.com</a> to add new options</p>
-							<a class="capabilities__link" href="gh.php">save</a>
+							<button class="capabilities__link" href="javascript:void(0);">save</button>
 						</div>
 					</form>
 				</div>
@@ -134,33 +134,31 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<a class="contact__heading" href="javascript:void(0);">3. Contact</a>
-					<p class="contact__subheading">The contact information is not public. Collllor does not share it with your buyers.</p> 
-					<br>
-					<p class="contact__subheading">Email on file</p>
-					<p class="contact__subheading-mail">gannadesign@gmail.com</p>
 				</div>
-			</div>
-			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
-					<form action="#" method="post" class="contact__form">
+					<form action="" method="post" class="contact__form rf">
+						<p class="contact__subheading">The contact information is not public. Collllor does not share it with your buyers.</p> 
+						<br>
+						<p class="contact__subheading">Email on file</p>
+						<p class="contact__subheading-mail">gannadesign@gmail.com</p>
 						<div class="contact__content">
 							<div class="contact__wrapper">
-								<input class="contact__info" type="text"  placeholder="Company Name (DBA)*" name="companyname" required autocomplete="off"/>
+								<input class="contact__info rfield" type="text"  placeholder="Company Name (DBA)*" name="companyname" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-firstname" type="text" placeholder="First Name*" name="firstName" required autocomplete="off"/>
+								<input class="contact__info contact__info-firstname rfield" type="text" placeholder="First Name*" name="firstName" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-lastname" type="text" placeholder="Last Name*" name="lastname" 		required autocomplete="off"/>
+								<input class="contact__info contact__info-lastname rfield" type="text" placeholder="Last Name*" name="lastname" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-email" type="email" placeholder="Email*" name="email" required/>
+								<input class="contact__info contact__info-email rfield" type="email" placeholder="Email*" name="email" required/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-phone" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
+								<input class="contact__info contact__info-phone rfield" type="tel" placeholder="Phone*" name="phone" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<select id="selectState">
+								<select id="selectState" required>
 									<option label="State" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
@@ -222,13 +220,13 @@
 								</select>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-city" type="text" placeholder="City*" name="city" required autocomplete="off"/>
+								<input class="contact__info contact__info-city rfield" type="text" placeholder="City*" name="city" required autocomplete="off"/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
+								<input class="contact__info contact__info-zip rfield" type="text" placeholder="Zipcode*" name="zipcode" required/>
 							</div>
 							<div class="contact__wrapper">
-								<input class="contact__info contact__info-service" type="email" placeholder="Customer Service Email" name="email" required/>
+								<input class="contact__info contact__info-service rfield" type="email" placeholder="Customer Service Email" name="email" required/>
 							</div>
 							<div class="contact__help">
 								<i class="icon-help contact__help-icon"></i>
@@ -236,7 +234,7 @@
 									<p class="contact__service-text">The customer service email  used for messages from your buyers. (optional)</p>
 								</div>
 							</div>
-							<a class="contact__link" href="javascript:void(0);">save</a>
+							<button type="submit" class="contact__link" href="javascript:void(0);">save</button>
 						</div>
 					</form>
 				</div>	
@@ -263,7 +261,7 @@
 							<div class="password__wrapper">
 								<input class="password__info" type="text"  placeholder="Repeat new password*" name="repeatNewPassword" required autocomplete="off"/>
 							</div>
-							<a class="password__link" href="javascript:void(0);">save</a>
+							<button class="password__link" href="javascript:void(0);">save</button>
 						</div>
 					</form>
 				</div>
@@ -275,19 +273,21 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<a class="payment__heading" href="javascript:void(0);">5. Payment</a>
-					<p class="payment__subheading">Set Up the form of payment. Payment is made once order is shipped. 7% from total transaction will be substracted. (Taxes and Shipping cost are not included)  
-					<br> 
-					Read <a class="payment__subheading-link" href="javascript:void(0);">Sellers Terms and conditions</a></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-offset-3 col-sm-9">
 					<form action="#" method="post" class="payment__form">
+						<p class="payment__subheading">Set Up the form of payment. Payment is made once order is shipped. 7% from total transaction will be substracted. (Taxes and Shipping cost are not included)  
+						<br> 
+						Read 
+						<a class="payment__subheading-link" href="javascript:void(0);">Sellers Terms and conditions</a></p>
 						<div class="payment__content">
 							<div class="payment__paychek" id="paymentpaychek">
 								<div class="payment__wrapper">
-									<select id="check" name="payment">
-										<option value="Chek" selected>Chek</option>
+									<select id="check" name="payment" required>
+										<option label="Payment" selected>Payment</option>
+										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
 										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
 									</select>
@@ -302,7 +302,7 @@
 									<input class="payment__info payment__info-address" type="email" placeholder="Mailing Address 2*" name="mailing2" required/>
 								</div>
 								<div class="payment__wrapper">
-									<select id="selectStatePayment">
+									<select id="selectStatePayment" required>
 										<option label="State">State</option>
 										<option value="Alabama">Alabama</option>
 										<option value="Alaska">Alaska</option>
@@ -369,32 +369,35 @@
 								<div class="payment__wrapper">
 									<input class="payment__info payment__info-zip" type="text" placeholder="Zipcode*" name="zipcode" required/>
 								</div>
-								<a class="payment__link" href="javascript:void(0);">save</a>
+								<button class="payment__link" href="javascript:void(0);">save</button>
 							</div>
 							<div class="payment__paypal" id="paymentpaypal">
 								<div class="payment__wrapper">
-									<select id="Pal" name="payment">
+									<select id="Pal" name="payment" required>
+										<option label="Payment" selected>Payment</option>
 										<option value="Chek">Chek</option>
-										<option value="PayPal" selected>PayPal</option>
+										<option value="PayPal">PayPal</option>
 										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
 								<div class="payment__wrapper">
 									<input class="payment__info payment__info-payaddress" type="email" placeholder="Email*" name="payemail" required/>
 								</div>
-								<a class="payment__paypal-link" href="javascript:void(0);">save</a>
+								<button class="payment__paypal-link" href="javascript:void(0);">save</button>
 							</div>
 							<div class="payment__bank" id="paymentbank">
 								<div class="payment__wrapper">
-									<select id="Bank" name="payment">
+									<select id="Bank" name="payment" required>
+										<option label="Payment" selected>Payment</option>
 										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
-										<option value="BankAccount" selected>Bank Account (USA, CANADA only)</option>
+										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
 								<div class="payment__wrapper wrap">
-									<select id="company" name="company">
-										<option value="Company" selected>Company</option>
+									<select id="company" name="company" required>
+										<option label="Payment" selected>Payment</option>
+										<option value="Company">Company</option>
 										<option value="Individual">Individual</option>
 									</select>
 								</div>
@@ -408,7 +411,7 @@
 									<input class="payment__info payment__info-ein" type="text" placeholder="EIN*" name="ein" required/>
 								</div>
 								<div class="payment__agree">
-									<input class="payment__agree-input" type="checkbox">
+									<input class="payment__agree-input" type="checkbox" required>
 									<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
 								</div>
 								<div class="payment__help">
@@ -417,20 +420,22 @@
 										<div class="payment__service-img"></div>
 									</div>
 								</div>
-								<a class="payment__bank-link" href="javascript:void(0);">save</a>
+								<button class="payment__bank-link" href="javascript:void(0);">save</button>
 							</div>
 							<div class="payment__individual" id="paymentindividual">
 								<div class="payment__wrapper">
-									<select id="individual" name="payment">
+									<select id="individual" name="payment" required>
+										<option label="Payment" selected>Payment</option>
 										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
-										<option value="BankAccount" selected>Bank Account (USA, CANADA only)</option>
+										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
 								<div class="payment__wrapper wrap">
-									<select id="self" name="company">
+									<select id="self" name="company" required>
+										<option label="Payment" selected>Payment</option>
 										<option value="Company">Company</option>
-										<option value="Individual" selected>Individual</option>
+										<option value="Individual">Individual</option>
 									</select>
 								</div>
 								<div class="payment__wrapper">
@@ -458,10 +463,10 @@
 									</div>
 								</div>
 								<div class="payment__accept">
-									<input type="checkbox">
+									<input type="checkbox" required>
 									<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
 								</div>
-								<a class="payment__individlink" href="javascript:void(0);">save</a>
+								<button class="payment__individlink" href="javascript:void(0);">save</button>
 							</div>
 						</div>
 					</form>	
@@ -481,7 +486,7 @@
 					<form action="#" method="post" class="verify__form">
 						<div class="verify__content">
 							<div class="verify__wrapper">
-								<select id="verifyState">
+								<select id="verifyState" required>
 									<option label="state" selected>State</option>
 									<option value="Alabama">Alabama</option>
 									<option value="Alaska">Alaska</option>
@@ -546,7 +551,7 @@
 								<input class="verify__percent" type="text" placeholder="%" name="percent" required autocomplete="off"/>
 							</div>
 							<div class="verify__wrapper-origin">
-								<select data-placeholder="Origin" class="chosen-select">
+								<select data-placeholder="Origin" class="chosen-select" required>
 									<option value="Origin">Origin</option>
 									<option value="Destination">Destination</option>
 									<option value="No Tax">No Tax</option>
@@ -559,7 +564,7 @@
 									<br><span class="verify__service-span">Destination-based states:</span> you are charging the rate where the item is being delivered.</p>
 								</div>
 							</div>
-							<a class="verify__link" href="javascript:void(0);">save</a>
+							<button class="verify__link" href="javascript:void(0);">save</button>
 						</div>
 					</form>
 				</div>
