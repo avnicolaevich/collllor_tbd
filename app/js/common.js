@@ -31,11 +31,9 @@ $(document).ready(function () {
         showCheckAll: false,
         showUncheckAll: false,
         closeIcon: 'ui-multiselect-icon-closethick'
-
     });
 
     customCheckbox('multiselect_category');
-
     categoryMultiSelect.bind("multiselectoptgrouptoggle", function (event, ui) {
         /* event: the original event object, most likely "click"
          ui.inputs: an array of the checkboxes (DOM elements) inside the optgroup
@@ -51,11 +49,9 @@ $(document).ready(function () {
     });
 
     customCheckbox('multiselect_attributes');
-
     attributesMultiSelect.bind("multiselectcheckall", function (event, ui) {
         customCheckboxCheckAll('multiselect_attributes', true);
     });
-
     attributesMultiSelect.bind("multiselectuncheckall", function (event, ui) {
         customCheckboxCheckAll('multiselect_attributes', false);
     });
@@ -206,74 +202,6 @@ $(document).ready(function () {
         $("#yearpicker").datepicker();
     });
 
-// Проверка полей форм
-
-    $(function () {
-        $('.rf').each(function () {
-            // Объявляем переменные (форма и кнопка отправки)
-            var form = $(this),
-                btn = form.find('.contact__link');
-
-            // Добавляем каждому проверяемому полю, указание что поле пустое
-            form.find('.rfield').addClass('empty_field');
-
-            // Функция проверки полей формы
-            function checkInput() {
-                form.find('.rfield').each(function () {
-                    if ($(this).val() != '') {
-                        // Если поле не пустое удаляем класс-указание
-                        $(this).removeClass('empty_field');
-                    } else {
-                        // Если поле пустое добавляем класс-указание
-                        $(this).addClass('empty_field');
-                    }
-                });
-            }
-
-            // Функция подсветки незаполненных полей
-            function lightEmpty() {
-                form.find('.empty_field').css({
-                    'border-color': 'red',
-                    'box-shadow': '2px 2px 10px rgba(200, 0, 0, 0.85)',
-                    'outline': 'none'
-                });
-                // Через полсекунды удаляем подсветку
-                setTimeout(function () {
-                    form.find('.empty_field').removeAttr('style');
-                }, 1000);
-            }
-
-            // Проверка в режиме реального времени
-            setInterval(function () {
-                // Запускаем функцию проверки полей на заполненность
-                checkInput();
-                // Считаем к-во незаполненных полей
-                var sizeEmpty = form.find('.empty_field').size();
-                // Вешаем условие-тригер на кнопку отправки формы
-                if (sizeEmpty > 0) {
-                    if (btn.hasClass('disabled')) {
-                        return false
-                    } else {
-                        btn.addClass('disabled')
-                    }
-                } else {
-                    btn.removeClass('disabled')
-                }
-            }, 500);
-
-            // Событие клика по кнопке отправить
-            btn.click(function () {
-                if ($(this).hasClass('disabled')) {
-                    // подсвечиваем незаполненные поля и форму не отправляем, если есть незаполненные поля
-                    lightEmpty();
-                    return false
-                } else {
-                    // Все хорошо, все заполнено, отправляем форму
-                    form.submit();
-                }
-            });
-        });
-    });
 });
 
 function customCheckbox(checkboxName) {
