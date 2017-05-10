@@ -283,14 +283,14 @@
 						Read 
 						<a class="payment__subheading-link" href="javascript:void(0);">Sellers Terms and conditions</a></p>
 						<div class="payment__content">
-							<div class="payment__paychek" id="paymentpaychek">
-								<div class="payment__wrapper">
+							<div class="payment__wrapper">
 									<select id="check" name="payment">
 										<option value="Chek">Chek</option>
 										<option value="PayPal">PayPal</option>
 										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
 									</select>
 								</div>
+							<div class="payment__paychek" id="paymentpaychek">
 								<div class="payment__wrapper">
 									<input class="payment__info payment__info-check" type="text" placeholder="Check payable to*" name="payable" required autocomplete="off"/>
 								</div>
@@ -371,96 +371,71 @@
 								<button class="payment__link" type="submit">save</button>
 							</div>
 							<div class="payment__paypal" id="paymentpaypal">
-								<div class="payment__wrapper wrap">
-									<select id="Pal" name="payment">
-										<option value="Chek">Chek</option>
-										<option value="PayPal">PayPal</option>
-										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
-									</select>
-								</div>
 								<div class="payment__wrapper">
 									<input class="payment__info payment__info-payaddress" type="email" placeholder="Email*" name="payemail" required/>
 								</div>
 								<button class="payment__paypal-link" type="submit">save</button>
 							</div>
 							<div class="payment__bank" id="paymentbank">
-								<div class="payment__wrapper">
-									<select id="Bank" name="payment">
-										<option value="Chek">Chek</option>
-										<option value="PayPal">PayPal</option>
-										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
-									</select>
-								</div>
 								<div class="payment__wrapper wrap">
 									<select id="company" name="company">
 										<option value="Company">Company</option>
 										<option value="Individual">Individual</option>
 									</select>
 								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-rnumber" type="number" placeholder="Routing Number*" name="numberRouting" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-anumber" type="number" placeholder="Account number*" name="numberAccount" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-ein" type="text" placeholder="EIN*" name="ein" required/>
-								</div>
-								<div class="payment__agree">
-									<input class="payment__agree-input" type="checkbox" required>
-									<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
-								</div>
-								<div class="payment__help">
-									<i class="icon-help payment__help-icon"></i>
-									<div class="payment__service">
-										<div class="payment__service-img"></div>
+								<div class="payment__company" id="paymentcompany">
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-rnumber" type="number" placeholder="Routing Number*" name="numberRouting" required/>
 									</div>
-								</div>
-								<button class="payment__bank-link" type="submit">save</button>
-							</div>
-							<div class="payment__individual" id="paymentindividual">
-								<div class="payment__wrapper">
-									<select id="individual" name="payment">
-										<option value="Chek">Chek</option>
-										<option value="PayPal">PayPal</option>
-										<option value="BankAccount">Bank Account (USA, CANADA only)</option>
-									</select>
-								</div>
-								<div class="payment__wrapper wrap">
-									<select id="self" name="company">
-										<option value="Company">Company</option>
-										<option value="Individual">Individual</option>
-									</select>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-day" id="datepicker" type="text" value="DOB: Day" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-month" id="monthpicker" type="text" value="Month" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-year" id="yearpicker" type="text" value="Year" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-routing" type="number" placeholder="Routing Number*" name="routingnumber" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info payment__info-account" type="number" placeholder="Account Number*" name="accountnumber" required/>
-								</div>
-								<div class="payment__wrapper">
-									<input class="payment__info" type="text" placeholder="SSN: Last 4 digits*" name="ssn" required/>
-								</div>
-								<div class="payment__help">
-									<i class="icon-help payment__help-icon"></i>
-									<div class="payment__service">
-										<div class="payment__service-img"></div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-anumber" type="number" placeholder="Account number*" name="numberAccount" required/>
 									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-ein" type="text" placeholder="EIN*" name="ein" required/>
+									</div>
+									<div class="payment__agree">
+										<input class="payment__agree-input" type="checkbox" required>
+										<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
+									</div>
+									<div class="payment__help">
+										<i class="icon-help payment__help-icon"></i>
+										<div class="payment__service">
+											<div class="payment__service-img"></div>
+										</div>
+									</div>
+									<button class="payment__bank-link" type="submit">save</button>
 								</div>
-								<div class="payment__accept">
-									<input type="checkbox">
-									<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
+								<div class="payment__individual" id="paymentindividual">
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-day" id="datepicker" type="text" value="DOB: Day" required/>
+									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-month" id="monthpicker" type="text" value="Month" required/>
+									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-year" id="yearpicker" type="text" value="Year" required/>
+									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-routing" type="number" placeholder="Routing Number*" name="routingnumber" required/>
+									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info payment__info-account" type="number" placeholder="Account Number*" name="accountnumber" required/>
+									</div>
+									<div class="payment__wrapper">
+										<input class="payment__info" type="text" placeholder="SSN: Last 4 digits*" name="ssn" required/>
+									</div>
+									<div class="payment__help">
+										<i class="icon-help payment__help-icon"></i>
+										<div class="payment__service">
+											<div class="payment__service-img"></div>
+										</div>
+									</div>
+									<div class="payment__accept">
+										<input type="checkbox">
+										<p class="payment__text">I agree to <a class="payment__text-link" href="javascript:void(0);">Stripe Connected Account Agreement</a></p>
+									</div>
+									<button class="payment__individlink" type="submit">save</button>
 								</div>
-								<button class="payment__individlink" type="submit">save</button>
 							</div>
 						</div>
 					</form>	

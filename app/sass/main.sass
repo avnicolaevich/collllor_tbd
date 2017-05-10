@@ -182,6 +182,7 @@ input::-webkit-inner-spin-button
 			color: $font_color
 		&-link
 			@include save_link
+			margin-bottom: 70px
 /*End header styles*/
 
 /*Capabilities styles*/
@@ -211,6 +212,7 @@ input::-webkit-inner-spin-button
 			@include text_link
 	&__link
 		@include save_link
+		margin-bottom: 70px
 .ui-multiselect
 	max-width: 500px !important
 	width: 100% !important
@@ -224,6 +226,8 @@ input::-webkit-inner-spin-button
 		opacity: 0
 .ui-widget-header .ui-icon
 	background: none
+.ui-multiselect-checkboxes .ui-multiselect-optgroup a
+	display: inline-block
 .custom-checkbox
 	margin-right: -10px
 	&:before
@@ -297,7 +301,7 @@ input::-webkit-inner-spin-button
 			margin-bottom: 30px
 	&__link
 		@include save_link
-		margin-bottom: 20px
+		margin-bottom: 70px
 		margin-top: -20px
 	&__help
 		position: relative
@@ -365,7 +369,7 @@ input::-webkit-inner-spin-button
 	&__link
 		@include save_link
 		margin-top: 20px
-		margin-bottom: 50px
+		margin-bottom: 70px
 /*End of password styles*/
 
 /*Payment styles*/
@@ -400,10 +404,6 @@ input::-webkit-inner-spin-button
 		display: none
 		// position: absolute	
 		width: 100%	
-		&-link
-			@include save_link
-			margin-top: -20px
-			margin-bottom: 30px
 	&__individual
 		display: none
 		// position: absolute
@@ -411,6 +411,13 @@ input::-webkit-inner-spin-button
 		&-link
 			@include save_link
 			margin-top: 20px
+			margin-bottom: 30px
+	&__company
+		display: none
+		width: 100%
+		&-link
+			@include save_link
+			margin-top: -20px
 			margin-bottom: 30px
 	&__wrapper
 		// width: 100%
@@ -535,7 +542,7 @@ input::-webkit-inner-spin-button
 	&__link
 		@include save_link
 		margin-top: 20px
-		margin-bottom: 50px
+		margin-bottom: 70px
 /*End of payment styles*/
 
 /*Verify styles*/
@@ -553,7 +560,6 @@ input::-webkit-inner-spin-button
 		&-origin
 			width: 50%
 			display: inline-block
-			margin-top: -1px
 	&__percent
 		display: inline-block
 		width: 50%
@@ -572,9 +578,8 @@ input::-webkit-inner-spin-button
 	&__origin
 		display: inline-block
 		width: 50%
-		margin-top: -1px
 		font-size: 1.063em
-		height: 55px
+		height: 52px
 		padding: 0 18px
 		border: 1px solid #B1B1B1
 		color: $input_color
@@ -696,12 +701,12 @@ input::-webkit-inner-spin-button
 	bottom: 100%
 	border: 1px solid #ff8e40
 	border-top: 1px solid #ff8e40
-	max-height: 300px
+	max-height: 250px
 .scombobox-list
     color: rgba(0, 0, 0, .6)
     display: none
     position: absolute
-    max-height: 200px
+    max-height: 250px
     min-width: 100%
     max-width: 300%
     white-space: nowrap
@@ -747,6 +752,8 @@ input::-webkit-inner-spin-button
     cursor: pointer
 .scombobox-dropdown-arrow:hover
     opacity: 1
+.scombobox-dropdown-arrow-up:focus
+	border: 1px solid #ff8e40
 .scombobox-dropdown-arrow-up
     background: url("../img/ui-icons_444444_256x240.png") -65px -16px
 .scombobox-dropdown-background
